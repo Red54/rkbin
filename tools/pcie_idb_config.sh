@@ -112,7 +112,7 @@ if [[ $lanes == 4 ]]; then
 elif [[ $lanes == 2 ]]; then
 	code1=23
 	if [[ $soc == RK3588 ]]; then
-		code0=01
+		code0=00
 	fi
 elif [[ $lanes == 1 ]]; then
 	code1=13

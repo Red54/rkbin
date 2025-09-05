@@ -1,5 +1,17 @@
 # rv1126b Release Note
 
+## rv1126b_bl31_v1.10.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-09-05 | rv1126b_bl31_v1.10.elf | 33e45088f | important |
+
+### New
+
+1. Save and restore more registers when system suspend.
+
+------
+
 ## rv1126b_bl31_v1.09.elf
 
 | Date       | File                  | Build commit | Severity  |

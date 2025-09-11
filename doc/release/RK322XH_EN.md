@@ -1,5 +1,19 @@
 # RK322XH Release Note
 
+## rk322xh_ddr_{333,400}MHz_v1.22.bin
+
+| Date       | File                               | Build commit | Severity  |
+| ---------- | ---------------------------------- | ------------ | --------- |
+| 2025-09-11 | rk322xh_ddr_{333,400}MHz_v1.22.bin | 38b50a9      | important |
+
+### Fixed
+
+| Index | Severity  | Update                       | Issue description | Issue source |
+| ----- | --------- | ---------------------------- | ----------------- | ------------ |
+| 1     | important | Improve the security of DDR. | -                 | -            |
+
+------
+
 ## rk322xh_usbplug_v2.54.bin
 
 | Date       | File                   | Build commit | Severity  |

@@ -1,5 +1,17 @@
 # rv1126b Release Note
 
+## rv1126b_spl{, _ipc}_v1.04.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | :--------------------- | ------------ | --------- |
+| 2025-09-11 | rv1126b_spl{, _ipc}_v1.04.bin | 23541e77b13    | important |
+
+| Index | Severity  | Update             | Issue description                                            | Issue source |
+| ----- | --------- | ------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix default bias | Due to the width, some temperatures may overflow. | -            |
+
+------
+
 ## rv1126b{p}_ddr_{1332, 1056}MHz_v1.06.bin
 
 | Date       | File                                     | Build commit | Severity  |

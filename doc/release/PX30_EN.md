@@ -1,5 +1,19 @@
 # PX30 Release Note
 
+## px30_ddr_333MHz_v2.12.bin
+
+| Date       | file                      | Build commit | Severity  |
+| ---------- | ------------------------- | ------------ | --------- |
+| 2025-09-11 | px30_ddr_333MHz_v2.12.bin | e8ca401      | important |
+
+### Fixed
+
+| Index | Severity  | Update                      | Issue description | Issue source |
+| ----- | --------- | --------------------------- | ----------------- | ------------ |
+| 1     | important | Improve the security of DDR | -                 | -            |
+
+------
+
 ## px30_usbplug_v1.42.bin
 
 | Date       | File                   | Build commit | Severity  |

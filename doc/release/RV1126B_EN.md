@@ -1,5 +1,24 @@
 # rv1126b Release Note
 
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.06.bin
+
+| Date       | File                                     | Build commit | Severity  |
+| ---------- | :--------------------------------------- | ------------ | --------- |
+| 2025-09-11 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.06.bin | 1604bf9935   | important |
+
+### New
+
+1. Support RV1126BJ.
+2. Support pstore.
+
+### Fixed
+
+| Index | Severity  | Update             | Issue description                                            | Issue source |
+| ----- | --------- | ------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix refresh_margin | Some LPDDR4(X) may be unstable at specific frequency under high temperatures | 572300       |
+
+------
+
 ## rv1126b_bl31_v1.10.elf
 
 | Date       | File                  | Build commit | Severity  |

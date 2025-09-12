@@ -1,5 +1,19 @@
 # PX30 Release Note
 
+## px30_usbplug_v1.42.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | -----------------------| ------------ | --------- |
+| 2025-09-12 | px30_usbplug_v1.42.bin | a29b4938e   | important |
+
+### Fixed
+
+| Index | Severity  | Update                          | Issue description | Issue source |
+| ----- | --------- | ------------------------------- | ----------------- | ------------ |
+| 1     | important | Improve the security of USBPLUG | -                 | -            |
+
+------
+
 ## px30_bl32_v2.19.bin
 
 | Date       | File                | Build commit | Severity  |

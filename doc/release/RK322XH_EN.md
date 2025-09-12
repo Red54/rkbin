@@ -1,5 +1,19 @@
 # RK322XH Release Note
 
+## rk322xh_usbplug_v2.54.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | -----------------------| ------------ | --------- |
+| 2025-09-12 | rk322xh_usbplug_v2.54.bin | a29b4938e   | important |
+
+### Fixed
+
+| Index | Severity  | Update                          | Issue description | Issue source |
+| ----- | --------- | ------------------------------- | ----------------- | ------------ |
+| 1     | important | Improve the security of USBPLUG | -                 | -            |
+
+------
+
 ## rk322xh_ddr_{333,400}MHz_v1.21.bin
 
 | Date       | File                               | Build commit | Severity |

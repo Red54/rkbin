@@ -426,6 +426,14 @@ function check_version()
 			continue
 		fi
 
+		# ignore mos spl
+		if [[ "${FILE}" == *_spl*primary_* ]]; then
+			continue
+		fi
+		if [[ "${FILE}" == *_spl*secondary_* ]]; then
+			continue
+		fi
+
 		if ! strings ${FILE} | grep -q 'fwver: ' ; then
 			echo "ERROR: ${FILE}: No \"fwver: \" string found in binary"
 			exit 1

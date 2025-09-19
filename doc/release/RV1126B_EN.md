@@ -1,5 +1,18 @@
 # rv1126b Release Note
 
+## rv1126b_bl31_v1.11.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-09-19 | rv1126b_bl31_v1.11.elf | 405ded103 | important |
+
+### New
+
+1. Support ultra-mode for system sleep.
+2. Support use non-ECC mode to read OTP.
+
+------
+
 ## rv1126b_spl{, _ipc}_v1.04.bin
 
 | Date       | File                   | Build commit | Severity  |

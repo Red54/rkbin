@@ -1,5 +1,17 @@
 # rv1126b Release Note
 
+## rv1126b_spl{, _ipc}_v1.05.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | :--------------------- | ------------ | --------- |
+| 2025-09-26 | rv1126b_spl{, _ipc}_v1.05.bin | 2f340fbbc13    | important |
+
+### New
+
+1. Adjust tsadc offset and bias according to otp.
+
+------
+
 ## rv1126b_bl31_v1.11.elf
 
 | Date       | File                  | Build commit | Severity  |

@@ -1,5 +1,18 @@
 # rv1126b Release Note
 
+## rv1126b_bl31_v1.12.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-11-04 | rv1126b_bl31_v1.12.elf | ae491a342 | important |
+
+### New
+
+1. Support 16bit LPDDR4/LPDDR4X for system suspend.
+2. Optimize system resume time.
+
+------
+
 ## rv1126b{p}_ddr_{1332, 1056}MHz_v1.07.bin
 
 | Date       | File                                     | Build commit | Severity  |

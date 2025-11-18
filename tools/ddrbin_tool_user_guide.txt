@@ -55,26 +55,27 @@ The detail information as following:
 	|  RV1126B/BP   |   V1.00   |   V1.00  | V1.00 |  V1.00 | V1.00 |        V1.00      |          V1.00          |    X    |        V1.00         |
 	+---------------+-----------+----------+-------+--------+-------+-------------------+-------------------------+---------+----------------------+
 
-| function                              | platform and ddrbin version                          |
-| ------------------------------------- | ------------------------------------------           |
-| first scan channel/channel mask       | RK3588 V1.00/RK3399 V1.25/RK3288 V1.11               |
-| stride type                           | RK3588 V1.00/RK3399 V1.25/RK3288 V1.11               |
-| ext_temp_ref                          | RK356x V1.16/RK3528 V1.07/RK1808 V1.06/RV1126B V1.00 |
-| link_ecc_en                           | Null                                                 |
-| per_bank_ref_en                       | RK3588 V1.09/RV1126B V1.00                           |
-| derate_en                             | RK3588 V1.09/RK356x V1.19/RK3528 V1.07/RV1126B V1.00 |
-| auto_precharge_en                     | Null                                                 |
-| res_space_remap_portion               | RK3588 V1.09                                         |
-| res_space_remap_all                   | RK3588 V1.09                                         |
-| rd_vref_scan_en                       | RK3588 V1.08/RV1126B V1.00                           |
-| wr_vref_scan_en                       | RK3588 V1.08/RV1126B V1.00                           |
-| eye_2d_scan_en                        | RK3588 V1.08                                         |
-| ch/bank/rank_mask                     | RK3588 V1.00                                         |
-| pstore base_addr/buf_size             | RK3588 V1.09                                         |
-| uboot/atf/optee/spl/tpl log en        | RK3588 V1.09                                         |
-| boot_fsp                              | RK3588 V1.09                                         |
-| pageclose                             | RK3588 V1.10/RV1126B V1.00                           |
-| first_init_dram_type/dfs_disable      | RK3588 V1.11/RV1126B V1.00                           |
+| function                              | platform and ddrbin version                                                    |
+| ------------------------------------- | ------------------------------------------------------------------------------ |
+| first scan channel/channel mask       | RK3588 V1.00/RK3399 V1.25/RK3288 V1.11                                         |
+| stride type                           | RK3588 V1.00/RK3399 V1.25/RK3288 V1.11                                         |
+| ext_temp_ref                          | RK356x V1.16/RK3528 V1.07/RK1808 V1.06/RV1126B V1.00                           |
+| link_ecc_en                           | Null                                                                           |
+| per_bank_ref_en                       | RK3588 V1.09/RV1126B V1.00                                                     |
+| derate_en                             | RK3588 V1.09/RK356x V1.19/RK3528 V1.07/RV1126B V1.00                           |
+| auto_precharge_en                     | Null                                                                           |
+| res_space_remap_portion               | RK3588 V1.09                                                                   |
+| res_space_remap_all                   | RK3588 V1.09                                                                   |
+| rd_vref_scan_en                       | RK3588 V1.08/RV1126B V1.00                                                     |
+| wr_vref_scan_en                       | RK3588 V1.08/RV1126B V1.00                                                     |
+| eye_2d_scan_en                        | RK3588 V1.08                                                                   |
+| ch/bank/rank_mask                     | RK3588 V1.00                                                                   |
+| pstore base_addr/buf_size             | RK3588 V1.09                                                                   |
+| uboot/atf/optee/spl/tpl log en        | RK3588 V1.09                                                                   |
+| boot_fsp                              | RK3588 V1.09                                                                   |
+| pageclose                             | RK3588 V1.10/RV1126B V1.00                                                     |
+| first_init_dram_type/dfs_disable      | RK3588 V1.11/RV1126B V1.00                                                     |
+| zq check                              | RK3588 V1.22/RK3576 V1.11/RK356x V1.25/RK3562 V1.09/RK3528 V1.13/RV1126B V1.07 |
 
 * UART info
 
@@ -159,6 +160,10 @@ It is define the addr and size to save ddrbin log for last log.
 
 * boot_fsp
 To choose the which DDR freq to boot system. 0 means fsp0_freq, 1 means fsp1_freq, 2 means fsp2_freq, 3 means fsp3_freq, the default is 0.
+
+* zq check
+0: enable zq check
+1: disable zq check
 
 * periodic interval
 The 0 means disable periodic training, others means enable. Unit: 100ms.

@@ -415,13 +415,14 @@ base_info_full = {
     'spl_log_en': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_0', 'shift': 1, 'mask': 0x1, 'version': 2},
     'tpl_log_en': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_0', 'shift': 0, 'mask': 0x1, 'version': 2},
     'reserved_global_reserved_0_bit5_11': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_0', 'shift': 5, 'mask': 0x7f, 'version': 2},
+    'zq_check': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 18, 'mask': 0x1, 'version': 6},
     'periodic_interval': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 11, 'mask': 0x7f, 'version': 2},
     'trfc_mode': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 9, 'mask': 0x3, 'version': 2},
     'first_init_dram_type': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 5, 'mask': 0xf, 'version': 2},
     'dfs_disable': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 4, 'mask': 0x1, 'version': 2},
     'pageclose': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 3, 'mask': 0x1, 'version': 2},
     'boot_fsp': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 0, 'mask': 0x7, 'version': 2},
-    'reserved_global_reserved_1_bit9_31': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 18, 'mask': 0x3fff, 'version': 2},
+    'reserved_global_reserved_1_bit19_31': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_1', 'shift': 18, 'mask': 0x1fff, 'version': 2},
     'reserved_global_reserved_2_bit0_31': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_2', 'shift': 0, 'mask': 0xffffffff, 'version': 2},
     'reserved_global_reserved_3_bit0_31': {'value': 0, 'num_base': 'dec', 'index': 'global_index', 'position': 'reserved_3', 'shift': 0, 'mask': 0xffffffff, 'version': 2},
 
@@ -1415,7 +1416,7 @@ def ddrbin_tool(argc, argv):
     verinfo_editable_offset = 0
     verinfo_editable_length = 17
 
-    print("version v1.26 20251111")
+    print("version v1.27 20251118")
     print("python {}, {}, {}".format(sys.version.split(' ', 1)[0], platform.system(), platform.machine()))
     if sys.version_info < (3, 6):
         print("Warning: Please installed Python 3.6 or later.")

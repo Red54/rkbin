@@ -1,5 +1,17 @@
 # rv1126b Release Note
 
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.07.bin
+
+| Date       | File                                     | Build commit | Severity  |
+| ---------- | :--------------------------------------- | ------------ | --------- |
+| 2025-11-20 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.07.bin | 776cd76d6e   | moderate |
+
+### New
+
+1. Support RV1126BP LPDDR4X.
+
+------
+
 ## rv1126b_spl{, _ipc}_v1.05.bin
 
 | Date       | File                   | Build commit | Severity  |

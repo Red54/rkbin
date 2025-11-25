@@ -1,5 +1,17 @@
 # rv1126b Release Note
 
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.08.bin
+
+| Date       | File                                     | Build commit | Severity  |
+| ---------- | :--------------------------------------- | ------------ | --------- |
+| 2025-11-20 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.08.bin | 1cbce6fa94   | moderate |
+
+### New
+
+1. Support RV1126BM.
+
+------
+
 ## rv1126b_bl31_v1.12.elf
 
 | Date       | File                  | Build commit | Severity  |

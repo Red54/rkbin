@@ -1,5 +1,19 @@
 # rv1126b Release Note
 
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.09.bin
+
+| Date       | File                                     | Build commit | Severity |
+| ---------- | :--------------------------------------- | ------------ | -------- |
+| 2025-11-27 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.09.bin | 6d04c3b809   | moderate |
+
+### Fixed
+
+| Index | Severity | Update                                                       | Issue description | Issue source |
+| ----- | -------- | ------------------------------------------------------------ | ----------------- | ------------ |
+| 1     | moderate | Resolve the issue of VOP screen flickering in some scenarios under DDR total bit width of 16bit. | -                 | -            |
+
+------
+
 ## rv1126b{p}_ddr_{1332, 1056}MHz_v1.08.bin
 
 | Date       | File                                     | Build commit | Severity  |

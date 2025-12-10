@@ -1,5 +1,17 @@
 # rv1126b Release Note
 
+## rv1126b_bl31_v1.13.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2025-12-10 | rv1126b_bl31_v1.13.elf | be86983f3 | important |
+
+### New
+
+1. Improve the frequency accuracy of RC OSC when system suspend.
+
+------
+
 ## rv1126b{p}_ddr_{1332, 1056}MHz_v1.09.bin
 
 | Date       | File                                     | Build commit | Severity |

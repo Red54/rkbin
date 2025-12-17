@@ -21,7 +21,7 @@ chip_list = ['px30', 'px30s', 'px3se', 'px5', 'rk1808', 'rk2118', 'rk312x', 'rk3
     'rk3128h', 'rk322x', 'rk3228a', 'rk3228b', 'rk3228h', 'rk322xh', 'rk3229', 'rk3308', 'rk3288',
     'rk3326', 'rk3326s', 'rk3328', 'rk3368', 'rk3399', 'rk3506', 'rk3528', 'rk356x', 'rk3562',
     'rk3566', 'rk3568', 'rk3576', 'rk3588', 'rv1103', 'rv1103b', 'rv1106', 'rv1108', 'rv1109',
-    'rv1126', 'rv1126b']
+    'rv1126', 'rv1126b', 'rk3538']
 
 version_old_list = ['rk322xh', 'rk3328', 'rk3318']
 
@@ -446,18 +446,19 @@ base_info_full = {
     'ddr2_odt_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr2_odt_pull_up_en': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odt_info', 'shift': 18, 'mask': 0x1, 'version': 2},
     'phy_ddr2_odt_pull_dn_en': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odt_info', 'shift': 19, 'mask': 0x1, 'version': 2},
-    'reserved_ddr2_odt_info_bit20_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xfff, 'version': 2},
+    'phy_ddr2_cs_drv_when_odten_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xff, 'version': 2},
+    'reserved_ddr2_odt_info_bit28_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odt_info', 'shift': 28, 'mask': 0xf, 'version': 2},
     'phy_ddr2_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odten_freq', 'shift': 12, 'mask': 0xfff, 'version': 2},
     'ddr2_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
-    'reserved_ddr2_odten_freq_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr2_cs_drv_when_odtoff_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr2_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr2_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_ddr2_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_ddr2_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr2_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr2_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr2_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_ddr2_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_ddr2_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr2_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr2_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'vref_when_odten', 'shift': 0, 'mask': 0x3ff, 'version': 5},
     'ddr2_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'vref_when_odten', 'shift': 10, 'mask': 0x3ff, 'version': 5},
     'ddr2_ca_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr2_index', 'position': 'vref_when_odten', 'shift': 20, 'mask': 0x3ff, 'version': 5},
@@ -487,18 +488,19 @@ base_info_full = {
     'ddr3_odt_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr3_odt_pull_up_en': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odt_info', 'shift': 18, 'mask': 0x1, 'version': 2},
     'phy_ddr3_odt_pull_dn_en': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odt_info', 'shift': 19, 'mask': 0x1, 'version': 2},
-    'reserved_ddr3_odt_info_bit20_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xfff, 'version': 2},
+    'phy_ddr3_cs_drv_when_odten_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xff, 'version': 2},
+    'reserved_ddr3_odt_info_bit28_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odt_info', 'shift': 28, 'mask': 0xf, 'version': 2},
     'phy_ddr3_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odten_freq', 'shift': 12, 'mask': 0xfff, 'version': 2},
     'ddr3_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
-    'reserved_ddr3_odten_freq_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr3_cs_drv_when_odtoff_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr3_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr3_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_ddr3_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_ddr3_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr3_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr3_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr3_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_ddr3_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_ddr3_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr3_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr3_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'vref_when_odten', 'shift': 0, 'mask': 0x3ff, 'version': 5},
     'ddr3_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'vref_when_odten', 'shift': 10, 'mask': 0x3ff, 'version': 5},
     'ddr3_ca_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr3_index', 'position': 'vref_when_odten', 'shift': 20, 'mask': 0x3ff, 'version': 5},
@@ -528,18 +530,19 @@ base_info_full = {
     'ddr4_odt_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr4_odt_pull_up_en': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odt_info', 'shift': 18, 'mask': 0x1, 'version': 2},
     'phy_ddr4_odt_pull_dn_en': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odt_info', 'shift': 19, 'mask': 0x1, 'version': 2},
-    'reserved_ddr4_odt_info_bit20_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xfff, 'version': 2},
+    'phy_ddr4_cs_drv_when_odten_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xff, 'version': 2},
+    'reserved_ddr4_odt_info_bit28_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odt_info', 'shift': 28, 'mask': 0xf, 'version': 2},
     'phy_ddr4_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odten_freq', 'shift': 12, 'mask': 0xfff, 'version': 2},
     'ddr4_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
-    'reserved_ddr4_odten_freq_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr4_cs_drv_when_odtoff_ohm': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr4_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr4_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_ddr4_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_ddr4_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr4_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr4_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_ddr4_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_ddr4_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_ddr4_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_ddr4_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_ddr4_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'vref_when_odten', 'shift': 0, 'mask': 0x3ff, 'version': 5},
     'ddr4_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'vref_when_odten', 'shift': 10, 'mask': 0x3ff, 'version': 5},
     'ddr4_ca_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'ddr4_index', 'position': 'vref_when_odten', 'shift': 20, 'mask': 0x3ff, 'version': 5},
@@ -569,18 +572,19 @@ base_info_full = {
     'lp2_odt_ohm': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp2_odt_pull_up_en': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odt_info', 'shift': 18, 'mask': 0x1, 'version': 2},
     'phy_lp2_odt_pull_dn_en': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odt_info', 'shift': 19, 'mask': 0x1, 'version': 2},
-    'reserved_lp2_odt_info_bit20_31': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xfff, 'version': 2},
+    'phy_lp2_cs_drv_when_odten_ohm': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xff, 'version': 2},
+    'reserved_lp2_odt_info_bit28_31': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odt_info', 'shift': 28, 'mask': 0xf, 'version': 2},
     'phy_lp2_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odten_freq', 'shift': 12, 'mask': 0xfff, 'version': 2},
     'lp2_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
-    'reserved_lp2_odten_freq_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp2_cs_drv_when_odtoff_ohm': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp2_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp2_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp2_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp2_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp2_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp2_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp2_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp2_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp2_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp2_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp2_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'vref_when_odten', 'shift': 0, 'mask': 0x3ff, 'version': 5},
     'lp2_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'vref_when_odten', 'shift': 10, 'mask': 0x3ff, 'version': 5},
     'lp2_ca_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp2_index', 'position': 'vref_when_odten', 'shift': 20, 'mask': 0x3ff, 'version': 5},
@@ -610,18 +614,19 @@ base_info_full = {
     'lp3_odt_ohm': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp3_odt_pull_up_en': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odt_info', 'shift': 18, 'mask': 0x1, 'version': 2},
     'phy_lp3_odt_pull_dn_en': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odt_info', 'shift': 19, 'mask': 0x1, 'version': 2},
-    'reserved_lp3_odt_info_bit20_31': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xfff, 'version': 2},
+    'phy_lp3_cs_drv_when_odten_ohm': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odt_info', 'shift': 20, 'mask': 0xff, 'version': 2},
+    'reserved_lp3_odt_info_bit28_31': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odt_info', 'shift': 28, 'mask': 0xf, 'version': 2},
     'phy_lp3_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odten_freq', 'shift': 12, 'mask': 0xfff, 'version': 2},
     'lp3_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
-    'reserved_lp3_odten_freq_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp3_cs_drv_when_odtoff_ohm': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp3_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp3_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp3_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp3_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp3_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp3_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp3_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp3_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp3_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp3_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp3_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'vref_when_odten', 'shift': 0, 'mask': 0x3ff, 'version': 5},
     'lp3_dq_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'vref_when_odten', 'shift': 10, 'mask': 0x3ff, 'version': 5},
     'lp3_ca_vref_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp3_index', 'position': 'vref_when_odten', 'shift': 20, 'mask': 0x3ff, 'version': 5},
@@ -661,11 +666,11 @@ base_info_full = {
     'phy_lp4_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp4_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp4_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp4_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp4_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp4_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp4_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp4_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp4_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp4_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'lp4_ca_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'ca_odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
     'reserved_lp4_ca_odten_freq_bit12_31': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'ca_odten_freq', 'shift': 12, 'mask': 0xfffff, 'version': 2},
     'phy_lp4_cs_drv_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4_index', 'position': 'cs_drv_ca_odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
@@ -728,11 +733,11 @@ base_info_full = {
     'phy_lp4x_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp4x_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp4x_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp4x_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp4x_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp4x_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp4x_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp4x_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp4x_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp4x_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'lp4x_ca_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'ca_odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
     'reserved_lp4x_ca_odten_freq_bit12_31': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'ca_odten_freq', 'shift': 12, 'mask': 0xfffff, 'version': 2},
     'phy_lp4x_cs_drv_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp4x_index', 'position': 'cs_drv_ca_odt_info', 'shift': 0, 'mask': 0xff, 'version': 2},
@@ -780,11 +785,11 @@ base_info_full = {
     'phy_lp5_dq_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odten', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp5_ca_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odten', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp5_clk_sr_when_odten': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odten', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp5_sr_when_odten_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp5_clk_compensate_phase_odten_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odten', 'shift': 24, 'mask': 0xff, 'version': 2},
     'phy_lp5_dq_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odtoff', 'shift': 0, 'mask': 0xff, 'version': 2},
     'phy_lp5_ca_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odtoff', 'shift': 8, 'mask': 0xff, 'version': 2},
     'phy_lp5_clk_sr_when_odtoff': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odtoff', 'shift': 16, 'mask': 0xff, 'version': 2},
-    'reserved_lp5_sr_when_odtoff_bit24_31': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
+    'phy_lp5_clk_compensate_phase_odtoff_ps': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'sr_when_odtoff', 'shift': 24, 'mask': 0xff, 'version': 2},
     'lp5_ca_odten_freq_mhz': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'ca_odten_freq', 'shift': 0, 'mask': 0xfff, 'version': 2},
     'lp5_wck_odt_en_freq': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'ca_odten_freq', 'shift': 12, 'mask': 0xfff, 'version': 2},
     'lp5_wck_odt': {'value': 0, 'num_base': 'dec', 'index': 'lp5_index', 'position': 'ca_odten_freq', 'shift': 24, 'mask': 0xff, 'version': 2},
@@ -1037,6 +1042,21 @@ uart_iomux_info_template = {
     'uart_iomux_val0': {'value': 0, 'num_base': 'hex', 'index': 'uart_iomux_index_u16', 'position': 'uart_iomux_val0', 'shift': 0, 'mask': 0xffffffff, 'version': 6},
 }
 
+def signed_char_to_int(byte_value):
+    byte_value = byte_value & 0xFF
+    if byte_value & 0x80:
+        return byte_value - 256
+    return byte_value
+
+def process_clk_compensate_phase(key, temp_value, info_from_bin):
+    if "clk_compensate_phase" in key:
+        # clk_compensate_phase* is signed char, unit 5ps per step
+        signed_temp_value = signed_char_to_int(temp_value)
+        result = signed_temp_value * 5
+        info_from_bin[key]['value'] = result
+        return True
+    return False
+
 def bin_data_2_info(info_from_bin, read_out, ddrbin_index, version, info_from_txt):
     info_from_bin['start tag']['value'] = 0x12345678
 
@@ -1063,8 +1083,9 @@ def bin_data_2_info(info_from_bin, read_out, ddrbin_index, version, info_from_tx
                     if value['index'] == index_name and value['version'] <= version:
                         temp_value = read_out[head_info_name][value['position']]
                         temp_value = (temp_value >> value['shift']) & value['mask']
-                        info_from_bin[key]['value'] = temp_value
-                        #print(f"D: {key} = {value} {value['position']}={temp_value}")
+                        if not process_clk_compensate_phase(key, temp_value, info_from_bin):
+                            info_from_bin[key]['value'] = temp_value
+                            #print(f"D: {key} = {value} {value['position']}={temp_value}")
             elif ddrbin_index[index_name]['offset'] != 0 and 'skew' in index_name:
                 if chip_info == 'rk3528':
                     for key, value in info_from_bin.items():
@@ -1075,8 +1096,9 @@ def bin_data_2_info(info_from_bin, read_out, ddrbin_index, version, info_from_tx
                             if position_1 in list(read_out[head_info_name].keys()):
                                 temp_value = read_out[head_info_name][position_1][position_2]
                                 temp_value = (temp_value >> value['shift']) & value['mask']
-                                info_from_bin[key]['value'] = temp_value
-                                #print(f"D: {key} = {value} {value['position']}={temp_value}")
+                                if not process_clk_compensate_phase(key, temp_value, info_from_bin):
+                                    info_from_bin[key]['value'] = temp_value
+                                    #print(f"D: {key} = {value} {value['position']}={temp_value}")
 
     return 0
 
@@ -1102,6 +1124,18 @@ def modefy_2_bin_data(info_from_txt, write_in, ddrbin_index, version):
                 position_name = 'null'
                 for key, value in info_from_txt.items():
                     if value['index'] == index_name and value['version'] <= version:
+                        if "clk_compensate_phase" in key:
+                            # clk_compensate_phase* is signed char, unit 5ps per step
+                            divided_value = value['value'] // 5
+                            if divided_value > 127:
+                                divided_value = 127
+                            elif divided_value < -128:
+                                divided_value = -128
+                            if divided_value < 0:
+                                unsigned_value = divided_value & 0xFF
+                            else:
+                                unsigned_value = divided_value
+                            value['value'] = unsigned_value
                         if position_name != value['position']:
                             position_name = value['position']
                             position_value = 0
@@ -1343,7 +1377,6 @@ def bin_data_readout(filebin, ddrbin_index, read_out, bin_skew_offset, version, 
 
     return 0
 
-
 def gen_info_from_bin(filegen_path, info_from_bin, verinfo_full, version):
     with open(filegen_path, 'w+', encoding='utf-8') as file:
         file.write('/* ' + verinfo_full + ' */\n')
@@ -1416,7 +1449,7 @@ def ddrbin_tool(argc, argv):
     verinfo_editable_offset = 0
     verinfo_editable_length = 17
 
-    print("version v1.27 20251118")
+    print("version v1.28 20251217")
     print("python {}, {}, {}".format(sys.version.split(' ', 1)[0], platform.system(), platform.machine()))
     if sys.version_info < (3, 6):
         print("Warning: Please installed Python 3.6 or later.")

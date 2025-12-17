@@ -54,6 +54,8 @@ The detail information as following:
 	+---------------+-----------+----------+-------+--------+-------+-------------------+-------------------------+---------+----------------------+
 	|  RV1126B/BP   |   V1.00   |   V1.00  | V1.00 |  V1.00 | V1.00 |        V1.00      |          V1.00          |    X    |        V1.00         |
 	+---------------+-----------+----------+-------+--------+-------+-------------------+-------------------------+---------+----------------------+
+	|    RK3538     |     X     |   V1.00  | V1.00 |  V1.00 | V1.00 |        V1.00      |          V1.00          |    X    |        V1.00         |
+	+---------------+-----------+----------+-------+--------+-------+-------------------+-------------------------+---------+----------------------+
 
 | function                              | platform and ddrbin version                                                    |
 | ------------------------------------- | ------------------------------------------------------------------------------ |
@@ -260,6 +262,8 @@ The 'X' as follows means not support change frequencies by tool.
 |    RV1126BP   |                       [324MHz - 1056MHz]                        |
 |               |                 LP4/LP4X f1: [324MHz - 400MHz]                  |
 +---------------+-----------------------------------------------------------------+
+|    RK3538     | DDR3/LP3: [324MHz - 1056MHz]; LP4/LP4X/DDR4: [324MHz - 1184MHz] |
++---------------+-----------------------------------------------------------------+
 
 * DDR frequencies(add more)
 
@@ -318,10 +322,12 @@ Please refer to "Rockchip_Developer_Guide_Pll_Ssmod_Clock_CN" for more informati
 
 phy_ddr*_dq_drv_when_odten_ohm: The PHY DQ/DQS driver strength(write direction) when DRAM odt on. unit: ohm.
 phy_ddr*_ca_drv_when_odten_ohm: The PHY CMD/ADDR driver strength when DRAM odt on. unit: ohm.
+phy_ddr*_cs_drv_when_odten_ohm: The PHY CS driver strength when DRAM odt on. unit: ohm.
 phy_ddr*_clk_drv_when_odten_ohm: The PHY clock driver strength when DRAM odt on. unit: ohm.
 ddr*_dq_drv_when_odten_ohm: The DRAM DQ/DQS driver strength(read direction) when PHY odt on. unit: ohm.
 phy_ddr*_dq_drv_when_odtoff_ohm: The PHY DQ/DQS driver strength(write direction) when DRAM odt off. unit: ohm.
 phy_ddr*_ca_drv_when_odtoff_ohm: The PHY CMD/ADDR driver strength when DRAM odt off. unit: ohm.
+phy_ddr*_cs_drv_when_odtoff_ohm: The PHY CS driver strength when DRAM odt off. unit: ohm.
 phy_ddr*_clk_drv_when_odtoff_ohm: The PHY clock driver strength when DRAM odt off. unit: ohm.
 ddr*_dq_drv_when_odtoff_ohm: The DRAM DQ/DQS driver strength(read direction) when PHY odt off. unit: ohm.
 
@@ -347,8 +353,8 @@ The phy side driver strength support value as follows:
 +---------------+-------------------+-------------------+--------------+-----------------+----------------+----------------+-------------+
 |               | 572,289,195,145,  | 595,300,202,151,  |              | 654,328,221,165,| 585,297,202,   | 585,297,202,   |             |
 |               | 117,99,85,73,66,  | 122,102,89,76,68, |              |133,112,97,83,74,| 150,122,103,90,| 150,122,103,90,|             |
-|    RK3528     | 60,55,50,47,44,41,| 62,57,52,49,45,43,|  follow DDR4 | 67,62,57,53,49, | 77,69,63,58,53,| 77,69,63,58,53,|      X      |
-|               | 38,36,34,33,31,30,| 39,37,35,34,32,31,|              | 46,43,40,38,37, | 50,47,44,40,38,| 50,47,44,40,38,|             |
+|    RK3528/    | 60,55,50,47,44,41,| 62,57,52,49,45,43,|  follow DDR4 | 67,62,57,53,49, | 77,69,63,58,53,| 77,69,63,58,53,|      X      |
+|    RK3538     | 38,36,34,33,31,30,| 39,37,35,34,32,31,|              | 46,43,40,38,37, | 50,47,44,40,38,| 50,47,44,40,38,|             |
 |               | 29,28             | 30,29             |              | 35,33,32,31     | 37,35,33,32,31,| 37,35,33,32,31,|             |
 |               |                   |                   |              |                 | 30             | 30             |             |
 +---------------+-------------------+-------------------+--------------+-----------------+----------------+----------------+-------------+
@@ -403,8 +409,8 @@ The ODT "0" means disabled ODT.
 +---------------+-------------------+--------------------+--------------+-------------------+----------------+----------------+-------------+
 |               | 572,289,195,145,  | 595,300,202,151,   |              | 654,328,221,165,  | 585,297,202,   | 585,297,202,   |             |
 |               | 117,99,85,73,66,  | 122,102,89,76,68,  |              |133,112,97,83,74,  | 150,122,103,90,| 150,122,103,90,|             |
-|    RK3528     | 60,55,50,47,44,41,| 62,57,52,49,45,43, |  follow DDR4 | 67,62,57,53,49,   | 77,69,63,58,53,| 77,69,63,58,53,|      X      |
-|               | 38,36,34,33,31,30,| 39,37,35,34,32,31, |              | 46,43,40,38,37,   | 50,47,44,40,38,| 50,47,44,40,38,|             |
+|    RK3528/    | 60,55,50,47,44,41,| 62,57,52,49,45,43, |  follow DDR4 | 67,62,57,53,49,   | 77,69,63,58,53,| 77,69,63,58,53,|      X      |
+|    RK3538     | 38,36,34,33,31,30,| 39,37,35,34,32,31, |              | 46,43,40,38,37,   | 50,47,44,40,38,| 50,47,44,40,38,|             |
 |               | 29,28             | 30,29              |              | 35,33,32,31       | 37,35,33,32,31,| 37,35,33,32,31,|             |
 |               |                   |                    |              |                   | 30             | 30             |             |
 +---------------+-------------------+--------------------+--------------+-------------------+----------------+----------------+-------------+
@@ -433,6 +439,13 @@ phy_ddr*_ca_sr_when_odtoff: The PHY CMD/ADDR slew rate when odt off.
 phy_ddr*_clk_sr_when_odtoff: The PHY clock slew rate when odt off.
 
 The max value is 0x1f, the min is 0x0.
+
+* clk compensate phase
+
+phy_ddr*_clk_compensate_phase_odten_ps: The phy compensation phase of CLK relative to all CA when odt on.
+phy_ddr*_clk_compensate_phase_odtoff_ps: The phy compensation phase of CLK relative to all CA when odt off.
+This is with positive and negative signs. It is recommended that the step size be 5.
+Positive numbers indicate that the clk output is later than ca, while negative numbers indicate that the clk output is earlier than ca.
 
 * byte map
 

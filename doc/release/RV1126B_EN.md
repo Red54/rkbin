@@ -1,5 +1,21 @@
 # rv1126b Release Note
 
+## rv1126b{p}_ddr_{1332, 1056}MHz_v1.10.bin
+
+| Date       | File                                     | Build commit | Severity |
+| ---------- | :--------------------------------------- | ------------ | -------- |
+| 2026-01-06 | rv1126b{p}_ddr_{1332, 1056}MHz_v1.10.bin | 53750e2af0   | moderate |
+
+### New
+
+1. Support using the tool to change the RV1126BP frequency to a maximum of 1332MHz. Note: Please confirm that the hardware design can achieve the target frequency before making the change.
+
+2. Compatible with some UniIC and ISSI LPDDR4(X).
+
+3. Add rv1126b_ddr_Template_DDR3P216DD61346_32R5x25R0_2112Mbps_H1R6_V10_20251212_1056MHz_{tb_, eyescan_}v1.10.bin, only for supporting the template: RV1126B_Template_DDR3P216DD61346_32R5x25R0_2112Mbps_H1R6_V10_20251212.
+
+------
+
 ## rv1126b_bl31_v1.13.elf
 
 | Date       | File                  | Build commit | Severity  |

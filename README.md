@@ -45,11 +45,15 @@ bin/rk35/rk3562_bl32_v1.08.bin
 
 3. **版本管理原则**：binary 版本不低于 v1.00，更新时必须：提升版本号、更新 release 文档
 
+## 合规检查
+
+**提交前检查**：执行 `./scripts/checkpatch.sh`
+
+> 注意：checkpatch.sh是对第一个commit的内容进行检查，所以执行脚本前请先在本地commit。
 
 ## 合并原则
 
-1. **提交前检查**：执行 `./scripts/checkpatch.sh`
-2. **审核要求**：没有任何 -1 的情况下至少一个 review +1 来自补丁 owner 或 reviewer，补丁才可能被合并
+没有任何 -1 的情况下至少一个 review +1 来自补丁 owner 或 reviewer，补丁才可能被合并。
 
 
 ## 提交规范

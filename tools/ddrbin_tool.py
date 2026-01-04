@@ -1415,8 +1415,9 @@ def print_help():
         "	The date & time in the version information will be updated by default.\n"\
         "	like: ./ddrbin_tool.py px30 ddrbin_param.txt px30_ddr_333MHz_v1.13.bin\n"\
         "\n"\
-        "	OPTION: --verinfo_editable=TEXT		The TEXT(max 17 chars) will replace\n"\
-        "						the date & time in the version information.\n"\
+        "	OPTION: --ver_edit=TEXT		The TEXT(max 17 chars) will replace\n"\
+        "					the date & time in the version information.\n"\
+        "					TEXT=" " retains the original version information.\n"\
         "	like: ./ddrbin_tool.py px30 ddrbin_param.txt px30_ddr_333MHz_v1.13.bin [OPTION]\n"\
         "\n"\
         "function 2: get ddr.bin file config to gen_param.txt file\n"\
@@ -1449,7 +1450,7 @@ def ddrbin_tool(argc, argv):
     verinfo_editable_offset = 0
     verinfo_editable_length = 17
 
-    print("version v1.28 20251217")
+    print("version v1.29 20260104")
     print("python {}, {}, {}".format(sys.version.split(' ', 1)[0], platform.system(), platform.machine()))
     if sys.version_info < (3, 6):
         print("Warning: Please installed Python 3.6 or later.")
@@ -1464,7 +1465,7 @@ def ddrbin_tool(argc, argv):
     print("chip: {}".format(chip_info))
 
     try:
-        opts, args = getopt.gnu_getopt(argv, 'g:h', ['verinfo_editable='])
+        opts, args = getopt.gnu_getopt(argv, 'g:h', ['ver_edit='])
     except:
         print_help()
         return -1
@@ -1473,7 +1474,7 @@ def ddrbin_tool(argc, argv):
         if opt == '-g':
             gen_txt_from_bin = 1
             filegen_path = arg
-        elif opt == '--verinfo_editable':
+        elif opt == '--ver_edit':
             verinfo_editable = arg
             if len(verinfo_editable) > verinfo_editable_length:
                 print("The character count of 'verinfo_editable' exceeds the allowed limit of 17.")
@@ -1730,22 +1731,25 @@ def ddrbin_tool(argc, argv):
 
     # update ddrbin version information to bin file
     if verinfo_editable_offset != 0:
-        if verinfo_editable == '':
-            #print(f"position_1={position_1}, position_2={position_2}, {old_verinfo_editable}")
-            current_time = datetime.now()
-            verinfo_editable = current_time.strftime("%y/%m/%d-%H:%M.%S")
-        if len(verinfo_editable) < verinfo_editable_length:
-            verinfo_editable = verinfo_editable.ljust(verinfo_editable_length)
+        if verinfo_editable.isspace():
+            print("retains the original version information.")
+        else:
+            if verinfo_editable == '':
+                #print(f"position_1={position_1}, position_2={position_2}, {old_verinfo_editable}")
+                current_time = datetime.now()
+                verinfo_editable = current_time.strftime("%y/%m/%d-%H:%M.%S")
+            if len(verinfo_editable) < verinfo_editable_length:
+                verinfo_editable = verinfo_editable.ljust(verinfo_editable_length)
 
-        verinfo_editable_bytes = verinfo_editable.encode('utf-8')[:verinfo_editable_length]
-        try:
-            filebin.seek(verinfo_editable_offset)
-            filebin.write(verinfo_editable_bytes)
-            filebin.seek(verinfo_full_offset)
-            new_verinfo_full = filebin.read(verinfo_full_length).decode('utf-8', errors='replace')
-            print("new ddrbin version information: {}".format(new_verinfo_full))
-        except:
-            print("change verinfo_editable error")
+            verinfo_editable_bytes = verinfo_editable.encode('utf-8')[:verinfo_editable_length]
+            try:
+                filebin.seek(verinfo_editable_offset)
+                filebin.write(verinfo_editable_bytes)
+                filebin.seek(verinfo_full_offset)
+                new_verinfo_full = filebin.read(verinfo_full_length).decode('utf-8', errors='replace')
+                print("new ddrbin version information: {}".format(new_verinfo_full))
+            except:
+                print("change verinfo_editable error")
 
     filebin.close()
 

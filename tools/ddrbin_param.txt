@@ -50,6 +50,7 @@ optee_log_en=
 spl_log_en=
 tpl_log_en=
 
+lp5_vdd2_rail=
 zq_check=
 periodic_interval=
 trfc_mode=

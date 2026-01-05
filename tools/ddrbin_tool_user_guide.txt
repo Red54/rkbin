@@ -78,6 +78,7 @@ The detail information as following:
 | pageclose                             | RK3588 V1.10/RV1126B V1.00                                                     |
 | first_init_dram_type/dfs_disable      | RK3588 V1.11/RV1126B V1.00                                                     |
 | zq check                              | RK3588 V1.22/RK3576 V1.11/RK356x V1.25/RK3562 V1.09/RK3528 V1.13/RV1126B V1.07 |
+| lp5_vdd2_rail                         | RK3588 V1.22/RK3576 V1.13                                                      |
 
 * UART info
 
@@ -162,6 +163,10 @@ It is define the addr and size to save ddrbin log for last log.
 
 * boot_fsp
 To choose the which DDR freq to boot system. 0 means fsp0_freq, 1 means fsp1_freq, 2 means fsp2_freq, 3 means fsp3_freq, the default is 0.
+
+* lp5_vdd2_rail
+0: Dual VDD2 rail (1.05V & 0.9V)
+1: Single VDD2 rail (1.05V)
 
 * zq check
 0: enable zq check
